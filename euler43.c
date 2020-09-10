@@ -1,0 +1,79 @@
+#include<stdio.h>
+void main()
+{
+    long long a,b,c,d,e,f,g,h,i,j,t1,t2,t3,t4,t5,t6,t7,temp,sum=0;
+    for(a=1;a<10;a++)
+    {
+        for(b=0;b<10 ;b++)
+        {
+            if( b!=a)
+            for(c=0;c<10;c++)
+            {
+                if(c!=a&&c!=b)
+                for(d=0;d<10;d++)
+                {
+                    if(d!=c&&d!=b&&d!=a)
+                    for(e=0;e<10;e++)
+                    {
+                        if(e!=d&&e!=c&&e!=b&&e!=a)
+                        for(f=0;f<10;f++)
+                        {
+                            if(f!=e&&f!=d&&f!=c&&f!=b&&f!=a)
+                            for(g=0;g<10;g++)
+                            {
+                                if(g!=f&&g!=e&&g!=d&&g!=c&&g!=b&&g!=a)
+                                for(h=0;h<10;h++)
+                                {
+                                    if(h!=g&&h!=f&&h!=e&&h!=d&&h!=c&&h!=b&&h!=a)
+                                    for(i=0;i<10;i++)
+                                    {
+                                        if(i!=h&&i!=g&&i!=f&&i!=e&&i!=d&&i!=c&&i!=b&&i!=a)
+                                        for(j=0;j<10;j++)
+                                        {
+                                            if(j!=i&&j!=h&&j!=g&&j!=f&&j!=e&&j!=d&&j!=c&&j!=b&&j!=a)
+                                            {
+                                            //printf();
+                                            t1=h*100+i*10+j;
+                                            if(t1%17==0)
+                                            {
+                                                t2=g*100+h*10+i;
+                                                if(t2%13==0)
+                                                {
+                                                    t3=f*100+g*10+h;
+                                                    if(t3%11==0)
+                                                    {
+                                                        t4=e*100+f*10+g;
+                                                        if(t4%7==0)
+                                                        {
+                                                            t5=d*100+e*10+f;
+                                                            if(t5%5==0)
+                                                            {
+                                                                t6=c*100+d*10+e;
+                                                                if(t6%3==0)
+                                                                {
+                                                                    t7=b*100+c*10+d;
+                                                                    if(t7%2==0)
+                                                                    {
+                                                                        temp=a*1000000000+b*100000000+c*10000000+d*1000000+e*100000+f*10000+g*1000+h*100+i*10+j;
+                                                                        printf("%lld  %lld%lld%lld%lld%lld%lld%lld%lld%lld%lld\n",temp,a,b,c,d,e,f,g,h,i,j);
+                                                                        sum=sum+temp;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    printf("%lld  \n",sum);
+}
